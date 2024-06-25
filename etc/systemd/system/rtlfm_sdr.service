@@ -1,0 +1,12 @@
+[Unit]
+Description=start the APRS iGATE
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/home/pi/rtlfm_sdr.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
